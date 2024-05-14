@@ -1,0 +1,12 @@
+COLUMN TABLE employee_details_Address (
+  ID NVARCHAR(36) NOT NULL,
+  city NVARCHAR(5000) NOT NULL,
+  address NVARCHAR(5000) NOT NULL,
+  pincode INTEGER NOT NULL,
+  street NVARCHAR(5000),
+  landmark NVARCHAR(5000),
+  employee_ID NVARCHAR(36),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN employee_details_Employee AS employee ON (employee.ID = employee_ID)
+)

@@ -1,0 +1,7 @@
+COLUMN TABLE employee_details_Department (
+  ID NVARCHAR(36) NOT NULL,
+  name NVARCHAR(5000),
+  description NVARCHAR(5000),
+  headCount INTEGER,
+  PRIMARY KEY(ID)
+)

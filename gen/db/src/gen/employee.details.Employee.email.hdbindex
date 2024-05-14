@@ -1,0 +1,1 @@
+UNIQUE INVERTED INDEX employee_details_Employee_email ON employee_details_Employee (email)

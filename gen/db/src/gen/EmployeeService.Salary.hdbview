@@ -1,0 +1,8 @@
+VIEW EmployeeService_Salary AS SELECT
+  Salary_0.ID,
+  Salary_0.costToCompany,
+  Salary_0.employeePf,
+  Salary_0.employerPf,
+  Salary_0.nps,
+  Salary_0.vpf
+FROM employee_details_Salary AS Salary_0

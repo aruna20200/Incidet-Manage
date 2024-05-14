@@ -1,0 +1,9 @@
+COLUMN TABLE employee_details_Salary (
+  ID NVARCHAR(36) NOT NULL,
+  costToCompany DECIMAL(10, 2),
+  employeePf DECIMAL(10, 2),
+  employerPf DECIMAL(10, 2),
+  nps DECIMAL(10, 2),
+  vpf DECIMAL(10, 2),
+  PRIMARY KEY(ID)
+)

@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "EMPLOYEE_DETAILS_EMPLOYEE",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "employee.details-Employee.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "FNAME",
+          "LNAME",
+          "GENDER",
+          "DOB",
+          "CONTRACTSTARTED",
+          "EMAIL",
+          "PHONE",
+          "DEPARTMENT_ID",
+          "SALARY_ID",
+          "DESIGNATION_ID",
+          "AGE"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "FNAME": "fName",
+        "LNAME": "lName",
+        "GENDER": "gender",
+        "DOB": "DOB",
+        "CONTRACTSTARTED": "contractStarted",
+        "EMAIL": "email",
+        "PHONE": "phone",
+        "DEPARTMENT_ID": "department_ID",
+        "SALARY_ID": "salary_ID",
+        "DESIGNATION_ID": "designation_ID",
+        "AGE": "age"
+      }
+    }
+  ]
+}

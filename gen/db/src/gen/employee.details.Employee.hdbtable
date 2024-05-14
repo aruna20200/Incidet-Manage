@@ -1,0 +1,24 @@
+COLUMN TABLE employee_details_Employee (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  fName NVARCHAR(5000),
+  lName NVARCHAR(5000),
+  gender NVARCHAR(5000),
+  DOB DATE,
+  age INTEGER,
+  contractStarted DATE,
+  email NVARCHAR(5000) NOT NULL,
+  phone NVARCHAR(5000) NOT NULL,
+  salary_ID NVARCHAR(36),
+  department_ID NVARCHAR(36),
+  designation_ID NVARCHAR(36),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO MANY JOIN employee_details_Address AS address ON (address.employee_ID = ID),
+  MANY TO ONE JOIN employee_details_Salary AS salary ON (salary.ID = salary_ID),
+  MANY TO ONE JOIN employee_details_Department AS department ON (department.ID = department_ID),
+  MANY TO ONE JOIN employee_details_Designation AS designation ON (designation.ID = designation_ID)
+)

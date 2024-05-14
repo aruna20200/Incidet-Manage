@@ -1,0 +1,12 @@
+VIEW EmployeeService_Address AS SELECT
+  Address_0.ID,
+  Address_0.city,
+  Address_0.address,
+  Address_0.pincode,
+  Address_0.street,
+  Address_0.landmark,
+  Address_0.employee_ID
+FROM employee_details_Address AS Address_0
+WITH ASSOCIATIONS (
+  MANY TO ONE JOIN EmployeeService_Employee AS employee ON (employee.ID = employee_ID)
+)

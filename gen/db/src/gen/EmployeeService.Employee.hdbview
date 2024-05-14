@@ -1,0 +1,24 @@
+VIEW EmployeeService_Employee AS SELECT
+  Employee_0.ID,
+  Employee_0.createdAt,
+  Employee_0.createdBy,
+  Employee_0.modifiedAt,
+  Employee_0.modifiedBy,
+  Employee_0.fName,
+  Employee_0.lName,
+  Employee_0.gender,
+  Employee_0.DOB,
+  Employee_0.age,
+  Employee_0.contractStarted,
+  Employee_0.email,
+  Employee_0.phone,
+  Employee_0.salary_ID,
+  Employee_0.department_ID,
+  Employee_0.designation_ID
+FROM employee_details_Employee AS Employee_0
+WITH ASSOCIATIONS (
+  MANY TO MANY JOIN EmployeeService_Address AS address ON (address.employee_ID = ID),
+  MANY TO ONE JOIN EmployeeService_Salary AS salary ON (salary.ID = salary_ID),
+  MANY TO ONE JOIN EmployeeService_Department AS department ON (department.ID = department_ID),
+  MANY TO ONE JOIN EmployeeService_Designation AS designation ON (designation.ID = designation_ID)
+)

@@ -1,0 +1,1 @@
+UNIQUE INVERTED INDEX employee_details_Employee_phone ON employee_details_Employee (phone)

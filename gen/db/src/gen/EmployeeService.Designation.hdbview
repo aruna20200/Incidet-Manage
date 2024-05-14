@@ -1,0 +1,6 @@
+VIEW EmployeeService_Designation AS SELECT
+  Designation_0.ID,
+  Designation_0.name,
+  Designation_0.description,
+  Designation_0.level
+FROM employee_details_Designation AS Designation_0

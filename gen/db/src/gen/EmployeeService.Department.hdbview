@@ -1,0 +1,6 @@
+VIEW EmployeeService_Department AS SELECT
+  Department_0.ID,
+  Department_0.name,
+  Department_0.description,
+  Department_0.headCount
+FROM employee_details_Department AS Department_0
